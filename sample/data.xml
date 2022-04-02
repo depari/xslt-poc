@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="data.xsl"?>
+
+<programming_languages>
+
+    <language>
+
+        <name>HTML</name>
+
+        <category>web</category>
+
+        <developer>W3C</developer>
+
+        <version status="working draft">5.1</version>
+
+        <priority rating="1">high</priority>
+
+    </language>
+
+    <language>
+
+        <name>CSS</name>
+
+        <category>web</category>
+
+        <developer>W3C</developer>
+
+        <version status="stable">3.0</version>
+
+        <priority rating="3">middle</priority>
+
+    </language>
+
+    <language>
+
+        <name korean="자바">Java</name>
+
+        <category>application</category>
+
+        <developer>Oracle</developer>
+
+        <version status="stable">8.91</version>
+
+        <priority rating="2">high</priority>
+
+    </language>
+
+    <language>
+
+        <name korean="파이썬">Python</name>
+
+        <category>application</category>
+
+        <developer>Python</developer>
+
+        <version status="stable">3.52</version>
+
+        <priority rating="4">middle</priority>
+
+    </language>
+
+</programming_languages>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="cms_agreement.xsl"?>
+<cms_agreement_data>
+    <agreement_head>
+        <title>
+        <![CDATA[Account CMS Agreement]]>
+        </title>    
+        <desctription>
+        <![CDATA[Account 통합 약관 동의 시스템, 계정기반 서비스 이용 동의]]>        
+        </desctription>
+    </agreement_head>
+
+    <agreement_body>        
+        <agreement_item> 
+            <order>1</order>            
+            <id>account_tnc</id>
+            <parent_id type="main"></parent_id> <!-- main;sub; -->
+            <checkbox>N</checkbox><!-- Y;N; -->                        
+            <title><![CDATA[Samsung Services Terms and Conditions]]></title>
+            <description><![CDATA[We, Samsung Electronics Co., Ltd. (“we”, “our”, or “Samsung”), together with our affiliates, provide a variety of features, apps, and services that you can enjoy with our mobile devices, TVs, and other products, listed here (“Services”), and these Terms and Conditions (“Terms”) will cover your use of the Services.]]></description>
+            <detail>
+                <button_sid>SID_VIEW_DETAIL</button_sid>
+                <type>url</type><!-- url;text; -->
+                <detail_data><![CDATA[https://account.samsung.com/membership/policy/terms]]></detail_data>
+            </detail>            
+        </agreement_item>
+        <agreement_item> 
+            <order>2</order>
+            <id>account_pp</id>
+            <parent_id type="main"></parent_id> <!-- main;sub; -->            
+            <checkbox>N</checkbox><!-- Y;N; -->
+            <title><![CDATA[Samsung account U.S. Privacy Notice]]></title>
+            <description><![CDATA[Samsung Electronics Co., Ltd., along with our affiliates and subsidiaries (collectively, “Samsung”), respects your concerns about privacy. This Samsung account U.S. Privacy Notice applies to the personal information we obtain through your Samsung account and its services and features (collectively, “Services”). It does not apply to information collected by other apps, websites or services provided by Samsung.]]></description>
+            <detail>
+                <button_sid>SID_VIEW_DETAIL</button_sid>
+                <type>url</type><!-- url;text; -->                
+                <detail_data><![CDATA[https://account.samsung.com/membership/policy/privacy]]></detail_data>
+            </detail>            
+        </agreement_item>
+        <agreement_item> 
+            <order>3</order>            
+            <id>customization_tv</id>
+            <parent_id type="sub">account_pp</parent_id> <!-- main;sub; -->                        
+            <checkbox>Y</checkbox><!-- Y;N; -->
+            <title><![CDATA[Cumization for TV (Enjoy!)]]></title>
+            <description><![CDATA[This is about customization_tv]]></description>
+            <detail>
+                <button_sid>SID_VIEW_DETAIL</button_sid>
+                <type>url</type><!-- url;text; -->
+                <detail_data><![CDATA[https://www.samsung.com/us/account/customization-service/]]></detail_data>
+            </detail>            
+        </agreement_item>
+        <agreement_item> 
+            <order>4</order>            
+            <id>customization_ad_tv</id>
+            <parent_id type="sub">account_pp</parent_id> <!-- main;sub; -->                        
+            <checkbox>Y</checkbox><!-- Y;N; -->
+            <title><![CDATA[Cumization Adverisement for TV]]></title>
+            <description><![CDATA[This is about Customized Adverisement for TV]]></description>
+            <detail>
+                <button_sid>SID_VIEW_DETAIL</button_sid>
+                <type>text</type><!-- url;text; -->
+                <detail_data>this is for ad cus TV, this is test.</detail_data>
+            </detail>            
+        </agreement_item>
+
+    </agreement_body>
+
+    <agreement_tail>  
+        <agreetoall_button>SID_BUTTON_AGREE</agreetoall_button>
+        <agreement_disclaimer><![CDATA[If you select I agree to all, nice.]]></agreement_disclaimer>        
+        <agree_button>SID_BUTTON_AGREE</agree_button>
+        <skip_button>SID_BUTTON_SKIP</skip_button>
+    </agreement_tail>
+</cms_agreement_data>
