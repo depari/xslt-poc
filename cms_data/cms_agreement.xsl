@@ -21,6 +21,27 @@
                 
                     // Focus the first navigable element.
                     SpatialNavigation.focus();
+                    [].slice.call(document.querySelectorAll('input[type="checkbox"]'))
+                        .forEach(function(elem) {
+                            elem.checked = false;
+
+                            elem.addEventListener('keyup', function(evt) {
+                                if(evt.keyCode == 13)
+                                {
+                                    this.checked = !this.checked;
+                                }
+                                
+                            });
+                            elem.addEventListener('change', function(evt) {
+                                var config = {};
+                                config[this.value] = this.checked;
+
+                                // You can change the configurations of the specified section at
+                                // runtime. If section id is omitted, the global configurations
+                                // will be changed.
+                                SpatialNavigation.set('main', config);
+                            });
+                        });
                     });
                 </script> 
                 <style>
@@ -62,18 +83,19 @@
     <xsl:template match="cms_agreement_data/agreement_body">
         <xsl:for-each select="agreement_item">
             <tr>
-                <th>
-                    <xsl:if test="checkbox='Y'">
-                        <xsl:element name="input">
-                            <xsl:if test="@checked='true'">
+                <th>                                        
+                    <xsl:if test="checkbox_display='Y'">
+                        <xsl:element name="input">                            
+                            <!-- <xsl:if test="@checked='true'">
                                 <xsl:attribute name="checked">true</xsl:attribute>
-                            </xsl:if>
+                            </xsl:if> -->
                             <xsl:attribute name="id">
                                 <xsl:value-of select="id" />
                             </xsl:attribute>
-                            <xsl:attribute name="type">checkbox</xsl:attribute>                            
+                            <xsl:attribute name="type">checkbox</xsl:attribute>
+                            <!-- <xsl:attribute name="checked">checked</xsl:attribute> -->                            
                         </xsl:element>
-                    </xsl:if>
+                    </xsl:if>                    
                 </th>
                 <th>
                     <xsl:value-of select="id"/>
