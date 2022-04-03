@@ -92,8 +92,27 @@
                             <xsl:attribute name="id">
                                 <xsl:value-of select="id" />
                             </xsl:attribute>
-                            <xsl:attribute name="type">checkbox</xsl:attribute>
-                            <!-- <xsl:attribute name="checked">checked</xsl:attribute> -->                            
+                            <xsl:attribute name="type">checkbox</xsl:attribute>                            
+                            <xsl:attribute name="onkeyup">
+                                    <xsl:text>console.log(event.keyCode);</xsl:text>
+                                    <xsl:text>                                    
+                                        if(
+                                    </xsl:text>
+                                    <xsl:value-of select="id" />
+                                    <xsl:text>.checked==undefined){</xsl:text>                                   
+                                    <xsl:value-of select="id" />
+                                    <xsl:text>.checked=false; }</xsl:text>                               
+                                    <xsl:text>                                    
+                                        if(event.keyCode===13){                                            
+                                            console.log(event.keyCode);
+                                            console.log(
+                                    </xsl:text>
+                                    <xsl:value-of select="id" />
+                                    <xsl:text>.checked);}</xsl:text> 
+
+                                    <xsl:value-of select="id" />
+                                    <xsl:text>.checked = !</xsl:text> <xsl:value-of select="id" /><xsl:text>.checked;</xsl:text> 
+                            </xsl:attribute>                            
                         </xsl:element>
                     </xsl:if>                    
                 </th>
